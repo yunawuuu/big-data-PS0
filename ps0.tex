@@ -1,0 +1,142 @@
+% Fonts/languages
+\documentclass[12pt,english]{exam}
+\IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\usepackage{mathpazo}
+%\usepackage{mathptmx}
+
+% Colors: see  http://www.math.umbc.edu/~rouben/beamer/quickstart-Z-H-25.html
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{byublue}     {RGB}{0.  ,30. ,76. }
+\definecolor{deepred}     {RGB}{190.,0.  ,0.  }
+\definecolor{deeperred}   {RGB}{160.,0.  ,0.  }
+\newcommand{\textblue}[1]{\textcolor{byublue}{#1}}
+\newcommand{\textred}[1]{\textcolor{deeperred}{#1}}
+
+% Layout
+\usepackage{setspace} %singlespacing; onehalfspacing; doublespacing; setstretch{1.1}
+\setstretch{1.2}
+\usepackage[verbose,nomarginpar,margin=1in]{geometry} % Margins
+\setlength{\headheight}{15pt} % Sufficent room for headers
+\usepackage[bottom]{footmisc} % Forces footnotes on bottom
+
+% Headers/Footers
+\setlength{\headheight}{15pt}	
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\lhead{For-Profit Notes} \chead{} \rhead{\thepage}
+%\lfoot{} \cfoot{} \rfoot{}
+
+% Useful Packages
+%\usepackage{bookmark} % For speedier bookmarks
+\usepackage{amsthm}   % For detailed theorems
+\usepackage{amssymb}  % For fancy math symbols
+\usepackage{amsmath}  % For awesome equations/equation arrays
+\usepackage{array}    % For tubular tables
+\usepackage{longtable}% For long tables
+\usepackage[flushleft]{threeparttable} % For three-part tables
+\usepackage{multicol} % For multi-column cells
+\usepackage{graphicx} % For shiny pictures
+\usepackage{subfig}   % For sub-shiny pictures
+\usepackage{enumerate}% For cusomtizable lists
+\usepackage{pstricks,pst-node,pst-tree,pst-plot} % For trees
+
+% Bib
+\usepackage[authoryear]{natbib} % Bibliography
+\usepackage{url}                % Allows urls in bib
+
+% TOC
+\setcounter{tocdepth}{4}
+
+% Links
+\usepackage{hyperref}    % Always add hyperref (almost) last
+\hypersetup{colorlinks,breaklinks,citecolor=black,filecolor=black,linkcolor=byublue,urlcolor=blue,pdfstartview={FitH}}
+\usepackage[all]{hypcap} % Links point to top of image, builds on hyperref
+\usepackage{breakurl}    % Allows urls to wrap, including hyperref
+
+\pagestyle{head}
+\firstpageheader{\textbf{\class\ - \term}}{\textbf{\examnum}}{\textbf{Due: Sep. 14\\ midnight}}
+\runningheader{\textbf{\class\ - \term}}{\textbf{\examnum}}{\textbf{Due: Sep. 14\\ midnight}}
+\runningheadrule
+
+\newcommand{\class}{ECON/DCS 368}
+\newcommand{\term}{Fall 2023}
+\newcommand{\examdate}{Due: September 14, 2023 by Midnight}
+% \newcommand{\timelimit}{30 Minutes}
+
+\noprintanswers                         % Uncomment for no solutions version
+\newcommand{\examnum}{Problem Set 0}           % Uncomment for no solutions version
+% \printanswers                           % Uncomment for solutions version
+% \newcommand{\examnum}{Problem Set 1 - Solutions} % Uncomment for solutions version
+
+
+%\lhead{Econ 201 - Summer 2014} \chead{Quiz 1} \rhead{\thepage}
+%\lfoot{} \cfoot{} \rfoot{}
+%\setstretch{1.0}
+
+
+\begin{document}
+This problem set is intended to guide you through installation of different required software and get you familiar with GitHub classroom. It will also help me learn a bit more about your research interests. 
+
+In completing this assignment, you will be writing TeX code, either using \url{overleaf.com} or a local TeX editor like TeX Live. You will also be using Git, and publishing your work to GitHub.
+
+You will submit your problem set by pushing the document to \emph{your} fork of Problem Set 0, \texttt{big-data-PS0}. You will put this and all other problem sets in the repository \texttt{big-data-PSX}, where \texttt{X} is the problem set number. Name your files \texttt{PSX\_LastName.extension}.
+
+\begin{questions}
+\question Create an account at \url{GitHub.com} and ``star'' our class repository (\url{https://github.com/ECON368-fall2023-big-data-and-economics}). Please add a photo of yourself to your profile; this will make it easier for all of us to interact throughout the course.
+
+\question Fork the class repository to your own account. Once you have forked, go to ``Settings'' and click on ``Collaborators'' on the left hand bar. Enter my GitHub username so that I will be able to view your completed assignments.
+
+\question Fork the \texttt{big-data-PS0} repository to your own account. Once you have forked, go to ``Settings'' and click on ``Collaborators'' on the left hand bar. Enter my GitHub username so that I will be able to view your completed assignments.
+
+\question Download Git and GitHub Desktop. You can download Git at \url{https://git-scm.com/downloads}. You can download GitHub Desktop from \url{https://desktop.github.com/}. 
+
+\question Download R and RStudio. You can download R from \url{https://cran.r-project.org/} and RStudio from \url{https://www.rstudio.com/products/rstudio/download/}. 
+
+\question Download TeX Live or related TeX editor. You can download TeX Live from \url{https://www.tug.org/texlive/}. You may also use \url{overleaf.com} or another TeX editor of your choice. I will be able to provide less guidance on how to optimize those.
+
+\question Download Visual Studio Code (or similar text editor). You can download Visual Studio Code from \url{https://code.visualstudio.com/}. You may also use Sublime Text, \url{https://www.sublimetext.com/}, or another text editor of your choice. I will be able to provide less guidance on how to optimize those. 
+
+If using VSCode, navigate to the extensions tab on the LHS utility bar -- \texttt{ctrl+shift+X} will also pull it up. It looks like a square with four squares inside -- the top-right has been removed. Search for and install the following extensions:
+
+\begin{enumerate}
+    \item The \textit{R} extension by REditorSupport -- \url{https://code.visualstudio.com/docs/languages/r}
+  \item \textit{LaTeX Workshop} by James Yu -- \url{https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop}
+  \item Install Anaconda -- \url{https://www.anaconda.com/products/individual}
+  \item Follow the Radian installlation instructions -- \url{https://github.com/randy3k/radian}
+\end{enumerate}
+
+Follow installation instructions and setup. 
+
+\question Open a new LaTeX project in your editor of choice. Use the template provided in the \texttt{Solutions} folder of PS0.
+
+\question In the body of your .tex file, write a brief summary ($\approx$ half a page) of your interests in economics \& data science. What made you want to take this class? Do you have any ideas for what you would want to do for your project for this class? What are your goals for this class, and what is your plan for after graduation?
+
+\question At the end of your document, create a new section entitled ``Equation'' and write the following equation in \TeX format following the directions \href{https://www.overleaf.com/learn/latex/mathematical_expressions}{here}:
+\begin{equation}
+	a^{2} + b^{2} = c^{2}
+\end{equation}
+
+%\question Join our course's \texttt{gitter} chat group (the link is at the top of the syllabus README file on the course homepage on GitHub) and send a message to the class.
+
+\question Issue a pull request to our class repository (note: \emph{not} your private fork of the class repository) by adding a text file with your initials to the \texttt{People/} folder. The first (and only) line of the text file should say \texttt{'hello'}. For example, if I were completing this problem set, I would create a file called \texttt{TR.txt} in the \texttt{People/} folder (after cloning the repository) and then add it to the course repository via pull request.
+
+\end{questions}
+
+Note: Specific steps to complete this problem set are listed below:
+\begin{itemize}
+\item Double check that your big-data-PS0/solutions folder (in your local copy of the forked repository) has two files in it: PS0-solutions.tex and PS0-solutions.pdf.
+\item From the command line type the following:
+    \begin{itemize}
+    \item \texttt{git add PS0-solutions.tex PS0-solutions.pdf}
+    \item \texttt{git commit -m "Turning in my PS0"}
+    \item \texttt{git push origin master}
+    \end{itemize}
+\end{itemize}
+
+Are you still confused about Git? I definitely recommend going through \href{https://raw.githack.com/uo-ec607/lectures/master/02-git/02-Git.html}{these slides}. I also invite you to check out the ``Learn by doing'' resources on \url{https://try.github.io/}. Also, learning Git requires patience and with enough practice, you'll get it!
+
+\end{document}
