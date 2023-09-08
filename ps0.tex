@@ -129,7 +129,7 @@ You will submit your problem set by pushing the document to \emph{your} fork of 
       Use the \texttt{cd} (Change Directory) command to navigate to the directory where you want to clone the Git repository. Below I use the Documents folder, your choice where! 
       \begin{itemize}
         \item \textbf{Windows:} \texttt{cd C:\textbackslash Users\textbackslash YourUsername\textbackslash Documents}
-        \item \item \textbf{Mac:} \texttt{cd \textasciitilde/Documents}
+        \item \textbf{Mac:} \texttt{cd \textasciitilde/Documents}
       \end{itemize}
   \item \textbf{Clone the Repository:}
       To clone your fork of the Git repository, use the \texttt{git clone} command followed by the repository URL, which is the green ``Clone or download'' button on your forked repository webpage and copying the link.
@@ -156,14 +156,20 @@ You will submit your problem set by pushing the document to \emph{your} fork of 
   \item This tool was released this month, so it is still in beta. It is not perfect, but it is pretty cool. (This supersedes the need to use VS Code, but I have left the instructions for that installation below.)
 \end{enumerate}
 
-\question Download TeX Live or related TeX editor. You can download TeX Live from \url{https://www.tug.org/texlive/}. You may also use \url{overleaf.com} or another TeX editor of your choice. I will be able to provide less guidance on how to optimize those.
+\question Download TeX Live or a related \TeX editor. You can download TeX Live from \url{https://www.tug.org/texlive/}. You may also use \url{overleaf.com} or another TeX editor of your choice. I will be able to provide less guidance on how to optimize those.
 
-\question Navigate to the Solutions folder of this repository. Inside you will find \texttt{PS0\_solutions.Rmd} and \texttt{PS0\_solutions\_latex.tex}. Open one of these files in RStudio or your preferred TeX editor. In this file, write a brief summary ($\approx$ half a page) of your interests in economics \& data science. What made you want to take this class? Do you have any ideas for what you would want to do for your project for this class? What are your goals for this class, and what is your plan for after graduation? Repeat in the second file. 
+\question Navigate to the Solutions folder of this repository. Inside you will find \texttt{PS0\_solutions\_latex.tex}. Open one of thils files in your preferred TeX editor. In this file, write a brief summary ($\approx$ half a page) of your interests in economics \& data science. What made you want to take this class? Do you have any ideas for what you would want to do for your project for this class? What are your goals for this class, and what is your plan for after graduation? Repeat in the second file. 
 
 \question At the end of your document, create a new section entitled ``Equation'' and write the following equation in \TeX format following the directions \href{https://www.overleaf.com/learn/latex/mathematical_expressions}{here}:
 \begin{equation}
 	a^{2} + b^{2} = c^{2}
 \end{equation}
+
+\question Compile the .tex file into a .pdf. There should be an obvious green arrow for compilation in your \TeX editor. 
+
+Copy and paste this text and the equation into the \texttt{PS0\_solutions.Rmd} file. Knit the file and look at the output. You should have a PDF and an HTML file.
+
+Note that the equation you wrote will look incorrect. Try to figure out how to fix it. Ask ChatGPT or GitHub CoPilot for help if you like. 
 
 \question Issue a pull request to our class repository (note: \emph{not} your private fork of the class repository) by adding a text file with your initials to the \texttt{People/} folder. The first (and only) line of the text file should say \texttt{'hello'}. For example, if I were completing this problem set, I would create a file called \texttt{TR.txt} in the \texttt{People/} folder (after cloning the repository) and then add it to the course repository via pull request.
 
@@ -171,12 +177,12 @@ You will submit your problem set by pushing the document to \emph{your} fork of 
 
 Note: Specific steps to complete this problem set are listed below:
 \begin{itemize}
-\item Double check that your big-data-PS0/solutions folder (in your local copy of the forked repository) has two files in it: PS0-solutions.tex and PS0-solutions.pdf.
+\item Double check that your big-data-PS0/Solutions folder (in your local copy of the forked repository) has PS0\_solutions.Rmd, PS0\_solutions.html, PS0\_solutions.pdf, PS0\_solutions\_latex.tex, PS0\_solutions\_latex.pdf included in it. 
 \item From the command line type the following:
     \begin{itemize}
-    \item \texttt{git add PS0-solutions.tex PS0-solutions.pdf}
+    \item \texttt{git add PS0\_solutions*} -- it will warn you that some files are ignored. See the .gitignore file which specifically tells git to ignore nuisance files created by LaTeX editors. 
     \item \texttt{git commit -m "Turning in my PS0"}
-    \item \texttt{git push origin master}
+    \item \texttt{git push origin main}
     \end{itemize}
 \end{itemize}
 
@@ -184,7 +190,7 @@ Are you still confused about Git? I definitely recommend going through \href{htt
 
 \section{More advanced Programming with VS Code -- not required, but recommended}
 
-I had suggested that you download Visual Studio Code and use that in this course. I still do! It is a highly useful tool. At this time, RStudio will accomplish all of the goals WITHOUT needing you to install VS Code. I've included some tips for how to install below. 
+I had suggested that you download Visual Studio Code and use that in this course. I still do! It is a highly useful tool. At this time, RStudio will accomplish all my goals for the class WITHOUT needing you to install VSCode. I've included some tips for how to install below. 
 
 Download Visual Studio Code (or similar text editor). You can download Visual Studio Code from \url{https://code.visualstudio.com/}. You may also use Sublime Text, \url{https://www.sublimetext.com/}, or another text editor of your choice. I will be able to provide less guidance on how to optimize those. 
 
