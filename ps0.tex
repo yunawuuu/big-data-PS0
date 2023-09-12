@@ -148,6 +148,27 @@ You will submit your problem set by pushing the document to \emph{your} fork of 
   \end{enumerate}
 \end{enumerate}
 
+\question Create an ssh-key. This is a relatively new thing that must be done with GitHub. There are two ways to accomplish this task. One with the command line, one with RStudio. 
+
+\begin{enumerate}
+  \item \textbf{Within RStudio:} 
+  \begin{enumerate}
+    \item Navigate to \texttt{Tools} $\Rightarrow$ \texttt{Global options} $\Rightarrow$ \texttt{Git/SVN}
+    \item Under SSH key, check if you have one listed. If not, click ``Create SSH Key'' and create an SSH key of either type RSA or ED25519. Once you have a key listed, continue to the next step. 
+    \item Click \color{blue}{View public key} \color{black} next to \texttt{SSH key}
+    \item Copy the public key that appears
+    \item Navigate to \url{github.com} and click on your profile picture in the top-right corner. Go to \texttt{Settings} from the sidebar. 
+    \item Click on \texttt{SSH and GPG keys}. Click the green \textbf{New SSH key}. 
+    \item Give your key a catchy title so you remember it. 
+    \item Paste the ``public key'' into the Key line
+    \item Click Add SSH key
+    \item You should be good to go! 
+  \end{enumerate}
+  \item \textbf{Command line:} Full (\href{instructions here}{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent}) or by \href{Jenny Bryan}{https://happygitwithr.com/ssh-keys.html}
+\end{enumerate}
+
+We will go through this further in class, but follow the  if you want to get a jump on things. You will need to use a command line terminal to accomplish this task like Powershell, Terminal, or Bash. 
+
 \question Download R and RStudio. You can download R from \url{https://cran.r-project.org/} and RStudio from \url{https://www.rstudio.com/products/rstudio/download/}. '
 
 \begin{enumerate}
